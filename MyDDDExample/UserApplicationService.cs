@@ -24,5 +24,12 @@ namespace MyDDDExample
                 // throw new CanNotRegisterUserException(user, "User already exist.");
             }
         }
+
+        public User Get(string userId)
+        {
+            var targetId = new UserId(userId);
+            var user = userRepository.Find(targetId);
+            return user;
+        }
     }
 }
