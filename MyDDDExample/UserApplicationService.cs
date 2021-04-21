@@ -31,5 +31,10 @@ namespace MyDDDExample
             var user = userRepository.Find(targetId);
             return user;
         }
+
+        public void Update(string userId, string name)
+        {
+
+        }
     }
 }
