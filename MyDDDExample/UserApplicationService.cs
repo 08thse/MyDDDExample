@@ -34,7 +34,20 @@ namespace MyDDDExample
 
         public void Update(string userId, string name)
         {
+            // pass
+        }
 
+        public void Delete(UserDeleteCommand command)
+        {
+            var targetId = new UserId(command.Id);
+            var user = userRepository.Find(targetId);
+
+            if (user == null)
+            {
+                return;
+            }
+
+            userRepository.Delete(user);
         }
     }
 }
