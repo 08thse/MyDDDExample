@@ -22,6 +22,8 @@ namespace MyDDDExample
             if (userService.Exists(user))
             {
                 // throw new CanNotRegisterUserException(user, "User already exist.");
+                // 重複確認の "具体的なルール" はアプリケーションサービスでは実装しない。
+                // ドメインのルールはドメインサービス側で実装する。
             }
         }
 
