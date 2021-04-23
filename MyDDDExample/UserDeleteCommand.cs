@@ -6,7 +6,7 @@ namespace MyDDDExample
 {
     public class UserDeleteCommand
     {
-        // Update を実行するための情報を格納するオブジェクトというイメージを持った
+        // 「Update を実行するための情報を格納するオブジェクト」というイメージを持った
 
         public string Id { get; }
         public string Name { get; }
